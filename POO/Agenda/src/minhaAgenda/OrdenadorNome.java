@@ -22,7 +22,7 @@ public class OrdenadorNome extends Ordenador implements Comparator<Pessoa>{
     
     @Override
     public void ordena(ArrayList contatos){
-        Collections.sort(contatos, thenComparing(this));
+        Collections.sort(contatos, this.thenComparing(this));
     }            
     
 }
