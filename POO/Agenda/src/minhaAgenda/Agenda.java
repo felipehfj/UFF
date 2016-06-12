@@ -63,11 +63,15 @@ public class Agenda {
     }
 
     private String geraNome(int len) {
-        final String AB = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        final String UCASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        final String DCASE = "abcdefghijklmnopqrstuvwxyz";
+        
         SecureRandom rnd = new SecureRandom();
         StringBuilder sb = new StringBuilder(len);
-        for (int i = 0; i < len; i++) {
-            sb.append(AB.charAt(rnd.nextInt(AB.length())));
+        
+        sb.append(UCASE.charAt(rnd.nextInt(UCASE.length())));
+        for (int i = 1; i < len; i++) {
+            sb.append(DCASE.charAt(rnd.nextInt(DCASE.length())));
         }
         return sb.toString();
     }
