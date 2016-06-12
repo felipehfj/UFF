@@ -5,17 +5,10 @@
  */
 package mercado;
 
-import java.util.ArrayList;
-import mercado.produto.ProdutoMercado;
-import pessoa.Cliente;
-
 /**
  *
  * @author felipe
  */
-public class Pedido {
-    private Cliente cliente;
-    private ArrayList<ProdutoMercado> produtos = new ArrayList<ProdutoMercado>();
-    
+public class Relatorio {
     
 }
