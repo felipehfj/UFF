@@ -42,7 +42,5 @@ public class Pessoa implements Comparable<Object>{
     public String toString() {
         return "Pessoa{" + "nome=" + nome + ", telefone=" + telefone + '}';
     }
-    
-    
-    
+        
 }
