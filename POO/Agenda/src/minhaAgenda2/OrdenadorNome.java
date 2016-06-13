@@ -7,12 +7,13 @@ package minhaAgenda2;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 /**
  *
  * @author felipe
  */
-public class OrdenadorNome implements IOrdenador<Pessoa>{
+public class OrdenadorNome implements IOrdenador<Pessoa>, Comparator<Pessoa>{
 
     @Override
     public int compare(Pessoa p1, Pessoa p2) {
@@ -20,8 +21,8 @@ public class OrdenadorNome implements IOrdenador<Pessoa>{
     }
 
     @Override
-    public void sort(ArrayList contatos) {
-        Collections.sort(contatos);
+    public void sort(ArrayList<Pessoa> contatos) {
+        Collections.sort(contatos, thenComparing(this));
     }
     
 }

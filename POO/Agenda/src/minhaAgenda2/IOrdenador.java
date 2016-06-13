@@ -26,6 +26,6 @@ public interface IOrdenador<Pessoa> {
      *
      * @param contatos
      */
-    public abstract void sort(ArrayList contatos);
+    public abstract void sort(ArrayList<Pessoa> contatos);
     
 }

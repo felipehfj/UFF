@@ -5,13 +5,11 @@
  */
 package minhaAgenda2;
 
-import minhaAgenda.*;
-
 /**
  *
  * @author felipe
  */
-public class Pessoa implements Comparable<Object>{
+public class Pessoa{// implements Comparable<Object>{
     private String nome;
     private String telefone;
 
@@ -30,14 +28,6 @@ public class Pessoa implements Comparable<Object>{
 
     public String getTelefone() {
         return telefone;
-    }
-    
-    @Override   
-    public int compareTo(Object o){
-        if(o instanceof Pessoa){
-            return this.nome.compareToIgnoreCase(((Pessoa)o).getNome());
-        }
-        return -1;
     }
 
     @Override
