@@ -9,7 +9,7 @@ package minhaAgendaArray;
  *
  * @author felipe
  */
-public class Pessoa{// implements Comparable<Object>{
+public class Pessoa{
     private String nome;
     private String telefone;
 
