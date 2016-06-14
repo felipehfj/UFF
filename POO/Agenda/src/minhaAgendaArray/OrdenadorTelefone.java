@@ -21,6 +21,7 @@ public class OrdenadorTelefone implements IOrdenador<Pessoa>, Comparator<Pessoa>
         return p1.getTelefone().compareToIgnoreCase(p2.getTelefone());
     }
 
+    @Override
     public void sort(Pessoa[] contatos) {
        Collections.sort(new ArrayList<Pessoa>(Arrays.asList(contatos)), thenComparing(this));
     }
