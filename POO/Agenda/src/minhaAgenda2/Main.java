@@ -24,6 +24,9 @@ public class Main {
         
         System.out.println("Ordenação por telefone");
         agenda.listarTelefone();
+        
+        System.out.println("Agenda sem ordenação");
+        agenda.imprimir();
     }
     
 }

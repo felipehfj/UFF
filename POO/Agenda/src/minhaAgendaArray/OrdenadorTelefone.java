@@ -23,7 +23,7 @@ public class OrdenadorTelefone implements IOrdenador<Pessoa>, Comparator<Pessoa>
 
     @Override
     public void sort(Pessoa[] contatos) {
-       Collections.sort(new ArrayList<Pessoa>(Arrays.asList(contatos)), thenComparing(this));
+        Collections.sort(Arrays.asList(contatos), thenComparing(this));
     }
     
 }
