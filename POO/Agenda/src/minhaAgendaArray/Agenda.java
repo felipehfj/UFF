@@ -3,39 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package minhaAgenda2;
+package minhaAgendaArray;
 
 import java.security.SecureRandom;
-import java.util.ArrayList;
 
 /**
  *
  * @author felipe
  */
 public class Agenda {
-    private ArrayList<Pessoa> contatos = new ArrayList<>();
-
+    private Pessoa[] contatos = new Pessoa[20];
+    private int cont = 0;
+    
     public Agenda() {
 
     }
 
     public Pessoa addContato(Pessoa pessoa) {
-        this.contatos.add(pessoa);
+        this.contatos[cont] = new Pessoa(pessoa.getNome(), pessoa.getTelefone());
+        cont++;
         return pessoa;
-    }
-
-    /**
-     *
-     * @param pessoa
-     * @return
-     */
-    public boolean removeContato(Pessoa pessoa) {
-        if (!this.contatos.contains(pessoa)) {
-            return false;
-        } else {
-            this.contatos.remove(pessoa);
-            return true;
-        }
     }
 
     public void listarNome() {
@@ -51,13 +38,13 @@ public class Agenda {
     }
 
     public void imprimir() {
-        contatos.stream().forEach((c) -> {
-            System.out.println("Nome: " + c.getNome() + " | Telefone: " + c.getTelefone());
-        });
+        for(Pessoa pessoa : contatos) {
+            System.out.println("Nome: " + pessoa.getNome() + " | Telefone: " + pessoa.getTelefone());
+        }
     }
 
     public void popula() {
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < contatos.length; i++) {
             this.addContato(new Pessoa(this.geraNome(10),this.geraTelefone(8)));
         }
     }

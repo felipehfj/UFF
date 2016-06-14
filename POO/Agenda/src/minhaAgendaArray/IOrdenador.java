@@ -3,9 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package minhaAgenda2;
-
-import java.util.ArrayList;
+package minhaAgendaArray;
 
 /**
  *
@@ -26,6 +24,6 @@ public interface IOrdenador<Pessoa> {
      *
      * @param contatos
      */
-    public abstract void sort(ArrayList<Pessoa> contatos);
+    public abstract void sort(Pessoa[] contatos);
     
 }

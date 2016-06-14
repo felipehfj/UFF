@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package minhaAgenda2;
+package minhaAgendaArray;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 
@@ -20,9 +21,8 @@ public class OrdenadorNome implements IOrdenador<Pessoa>, Comparator<Pessoa>{
         return p1.getNome().compareToIgnoreCase(p2.getNome());
     }
 
-    @Override
-    public void sort(ArrayList<Pessoa> contatos) {
-        Collections.sort(contatos, thenComparing(this));
+    public void sort(Pessoa[] contatos) {
+        Collections.sort(new ArrayList<Pessoa>(Arrays.asList(contatos)), thenComparing(this));
     }
     
 }
