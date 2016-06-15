@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package polimorfism;
+package polimorfismo;
 
 /**
  *
  * @author felipe
  */
-public class Cao extends Animal{
-
+public class Homem extends Animal{
+    
     @Override
     public String fala() {
-        return "Au au";
+       return "Oi";
     }
     
     
