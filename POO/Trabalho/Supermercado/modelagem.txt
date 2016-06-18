@@ -1,0 +1,61 @@
+Pessoa
+-nome:String
+-cpf:String
+
+	Gerente
+		+adicionarEstoque(Produto)
+		+emitirRelatorioVenda(Venda)
+		+emitirRelatorioEstroque(Estoque)
+	Funcionario
+		+efetuaVenda(Produto)
+	Cliente
+		+consultaPrecoLeitor(Produto)
+
+
+
+Caixa
+-identificador:String
+-balanca:Balanca
+
+Balanca
++verificaPreco(Produto):double
+
+abstract Produto
+-nome:String
+-tipo:enum[UNID|KILO]
+
+ProdutoVenda
+-precoUnitario:double
+ProdutoEstoque
+-quantidade:double
+
+Estoque
+-produtos:Lista<Produto>
+
+
+Venda
+-funcionario:Funcionario
+-caixa:Caixa
+-itens:ItemVenda
+-totalVenda:double
++precoTotal():double
+
+ItemVenda
+-produto:ProdutoVenda
+-quantidade:int
++subtotal():double
+
+
+IPagamento
+-valor:double
++efetuarPagamento()
+	Cartao
+
+	Dinheiro
+	+calculaTroco(valor)
+
+Leitor
++verificaPreco(Produto)
+
+Relatorio
+venda:Lista<Venda>
